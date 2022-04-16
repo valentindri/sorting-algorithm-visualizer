@@ -1,25 +1,51 @@
 export default class SortingAlgorithms{
-
-    constructor(){
-
-    }
     
-    bubbleSort(barList, step, lap){//Only one swap per call
+    constructor(visualizer, barList){
 
-        let length = barList.length;
+        this.visualizer = visualizer;
+        this.barList = barList;
+        this.lap = barList.length - 1;
+        this.step = 1;
+    }
 
-        let bars = barList;
+    run(){
+        setInterval(this.bubbleSort, 500);
+    }
 
-        if(bars[step - 1].value > bars[step].value){
+    bubbleSort(){//Only one swap per call
+
+        
+        //console.log());
+        //console.log();
+        if(this.lap >= 0){
+
+            console.log(this.lap);
+            console.log(this.step);
+
+            if(this.barList[this.step - 1].value > barList[this.step].value){
             
-            let temp = bars[step-1];
-            bars[step-1] = bars[step];
-            bars[step] = temp;
+                let temp = this.barList[this.step-1];
+                this.barList[this.step-1] = barList[this.step];
+                this.barList[this.step] = temp;
+            }
 
-            console.log("swap");
+            this.step++;
+
+            if((this.step == this.lap)){
+                this.step = 1;
+                this.lap--;
+            }
+
+            this.visualizer.draw(this.barList);
+            
         }
         
-        return bars;
+
+        
+
+        
+        
+        
         
         
     }

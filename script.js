@@ -1,7 +1,6 @@
 import Visualizer from "./visualizer.js";
 import ListBuilder from "./listBuilder.js";
 import Bar from "./bar.js";
-import SortingAlgorithms from "./sortingAlgorithms.js";
 
 var canvas = document.getElementById("canvas");
 var c = canvas.getContext("2d");
@@ -18,11 +17,11 @@ for(let i = 0; i < unsortedList.length; i++){
     barList.push(new Bar(1000,500,unsortedList[i],topValue));//an array of Bar objects
 }
 
-var visualizer = new Visualizer(c,1000,500,barList);
-
+var visualizer = new Visualizer(c,1000,500);
+visualizer.draw(barList);
 
 
 function startSorting(){
-    visualizer.sorting = true;
+    visualizer.sort(barList);
     
 }
