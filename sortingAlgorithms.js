@@ -11,7 +11,7 @@ export default class SortingAlgorithms{
     }
 
     run(){
-        setInterval(this.b, 500);
+        setInterval(this.bubbleSort, 500);
     }
 
     bubbleSort(){//Only one swap per call
