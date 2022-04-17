@@ -1,4 +1,4 @@
-import SortingAlgorithms from "./sortingAlgorithms.js";
+import SortingAlgorithms from "./sortingAlgorithms.js"
 
 export default class Visualizer{
     constructor(c, canvasWidth, canvasHeight){
@@ -6,12 +6,6 @@ export default class Visualizer{
         this.canvasHeight = canvasHeight;
         
         this.c = c;
-    }
-
-
-    sort(barList){
-        this.algorithms = new SortingAlgorithms(this, barList);
-        this.algorithms.run();
     }
 
     draw(barList){

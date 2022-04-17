@@ -8,7 +8,7 @@ export default class Bar{
 
         this.maxValue = maxValue;
         this.height = Math.ceil((this.value*(this.canvasHeight-10))/this.maxValue);
-        this.width = 9.5;
+        this.width = 30;
 
         this.rowPos = this.canvasHeight - this.height;
 
