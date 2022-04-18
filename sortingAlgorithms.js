@@ -6,28 +6,27 @@ export default class SortingAlgorithms{
         this.barList = barList;
         this.lap = this.barList.length - 1
         this.step = 1;
-
-      
     }
 
     run(){
-        setInterval(this.bubbleSort, 500);
+        setInterval(this.bubbleSort.bind(this), 20);
+
     }
 
     bubbleSort(){//Only one swap per call
         
         if(this.lap >= 0){
 
-            if(this.barList[this.step - 1].value > barList[this.step].value){
+            if(this.barList[this.step - 1].value > this.barList[this.step].value){
             
                 let temp = this.barList[this.step-1];
-                this.barList[this.step-1] = barList[this.step];
+                this.barList[this.step-1] = this.barList[this.step];
                 this.barList[this.step] = temp;
             }
 
             this.step++;
 
-            if((this.step === this.lap)){
+            if((this.step -1 === this.lap)){
                 this.step = 1;
                 this.lap--;
             }
@@ -35,8 +34,6 @@ export default class SortingAlgorithms{
             this.visualizer.draw(this.barList);
             
         }
-        
-       
     }
 
 
