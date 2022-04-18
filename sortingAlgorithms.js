@@ -4,18 +4,17 @@ export default class SortingAlgorithms{
 
         this.visualizer = visualizer;
         this.barList = barList;
-        this.lap = this.barList.length - 1
+        this.lap = this.barList.length - 1;
         this.step = 1;
     }
 
     run(){
-        setInterval(this.bubbleSort.bind(this), 20);
-
+        this.sorting = setInterval(this.bubbleSort.bind(this), 20);
     }
 
     bubbleSort(){//Only one swap per call
         
-        if(this.lap >= 0){
+        if(this.lap > 0){
 
             if(this.barList[this.step - 1].value > this.barList[this.step].value){
             
@@ -33,6 +32,12 @@ export default class SortingAlgorithms{
 
             this.visualizer.draw(this.barList);
             
+        }
+        else 
+        {
+            this.lap = this.barList.length - 1;
+            this.step = 1;
+            clearInterval(this.sorting);
         }
     }
 

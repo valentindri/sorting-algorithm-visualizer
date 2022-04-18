@@ -12,16 +12,12 @@ export default class BarColor{
         let greenCode = this.getGreenCode(percentage);
         let blueCode = this.getBlueCode(percentage);
 
-
         let color = {
             red: redCode,
             green: greenCode,
             blue: blueCode
-
         };
-
         return color;
-
     }
 
     getGreenCode(percentage){
