@@ -15,7 +15,7 @@ export default class ListBuilder{
 
     static getColorList(){
         let list = [];
-        for(let x = 0; x < 5; x++){
+        for(let x = 0; x <= 5; x++){
             for(let i = 255; i >= 0; i--){
                 if(x == 0 || x == 5){
                     list.push(255);
@@ -32,7 +32,7 @@ export default class ListBuilder{
                 
             }
         }
-
+        //console.log(list);
         return list;
         
 
