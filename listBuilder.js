@@ -5,7 +5,7 @@ export default class ListBuilder{
         for(let i = 0; i < length; i++){
             list.push(this.getRandomNumber(bottom,top));
         }
-        return list;
+        return list;//
     }
 
 
