@@ -3,7 +3,7 @@ export default class ListBuilder{
     static newList(length, bottom, top){
         let list = [];
         for(let i = 0; i < length; i++){
-            list.push(this.getRandomNumber(bottom,top));
+            list.push(this.getRandomNumber(bottom,top));//////////
         }
         return list;//
     }
@@ -33,7 +33,7 @@ export default class ListBuilder{
             }
         }
         //console.log(list);
-        return list;
+        return list;//////////////////////////////
         
 
 
